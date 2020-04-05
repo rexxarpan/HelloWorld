@@ -4,7 +4,8 @@
 
 int main()
 {
-	 std::unordered_map<std::string, std::string> userMap{
+	using CredentialsMap = std::unordered_map<std::string, std::string>;
+	CredentialsMap userMap{
 		{"Gleb", "Admin"} ,
 		{"Roma", "User"} 
 	};
@@ -12,6 +13,11 @@ int main()
 	std::string name;
 	std::cin >> name;
 
-	std::cout << userMap[name] << std::endl;
+	const auto credIt = userMap.find(name);
+	if (credIt != userMap.end())
+		std::cout << credIt->second << std::endl;
+	else
+		std::cout << "canot find credentials for passed user name" << std::endl;
+	
 	return 0;
 }
