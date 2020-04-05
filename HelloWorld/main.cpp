@@ -1,29 +1,16 @@
 #include <iostream>
 
+#include <unordered_map>
+
 int main()
 {
-	//setlocale(0, "");
-	//int a, b;
-	//cout << "10: ";
-	//cin >> a;
-	//cout << "4: ";
-	//cin >> b;
-	//int c = a - b;
-	//cout << "Разность чисел = " << c << endl;
-/*
-	int a{ 10 };
-	int b{ 5 };
-
-	std::cout << a - b << std::endl;
+	std::unordered_map<std::string, std::string> userMap;
+	userMap.emplace("Gleb", "Admin");
+	userMap.emplace("Roma", "User");
 
 	std::string name;
 	std::cin >> name;
-	std::cout << name << std::endl;
-*/
 
-	float fp{ 0.f };
-
-	std::cin >> fp;
-
+	std::cout << userMap[name] << std::endl;
 	return 0;
 }
