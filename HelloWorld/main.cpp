@@ -4,9 +4,10 @@
 
 int main()
 {
-	std::unordered_map<std::string, std::string> userMap;
-	userMap.emplace("Gleb", "Admin");
-	userMap.emplace("Roma", "User");
+	 std::unordered_map<std::string, std::string> userMap{
+		{"Gleb", "Admin"} ,
+		{"Roma", "User"} 
+	};
 
 	std::string name;
 	std::cin >> name;
